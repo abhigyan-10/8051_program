@@ -2,8 +2,7 @@
 
 #include <REGX52.H>
 
-sbit SW1 = P0^1;
-sbit LED1 = P1^0;
+sbit SW1 = P0^1;  //declaring P0.1 as SW1
 void delay()
 {
 	volatile unsigned long i;
@@ -11,17 +10,17 @@ void delay()
 }
 void main()
 {
-		P1 = 0;
+	P1 = 0;
     while(1)
     {
         if(SW1 == 0)
-				{
-					delay();
-					if(SW1 == 0)
-					{
-            P1 = ~P1;
-						while(SW1 == 0);
-					}
-				}
+		{
+			delay();
+			if(SW1 == 0)
+			{
+               P1 = ~P1;   //toggling all the LEDs
+			   while(SW1 == 0);
+			}
+		}
     }
 }
