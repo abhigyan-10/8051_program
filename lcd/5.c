@@ -77,7 +77,7 @@ void delay(unsigned char d)
 	for(i=0;i<=d; i++)
 		for(j=0;j<=3500;j++);
 }
-void serial_ISR (void) interrupt 0
+void ext0_ISR (void) interrupt 0
 {
 	count++;
 }
