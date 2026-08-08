@@ -86,6 +86,8 @@ void main()
 		lcd_cmd(0x80);
 		
 		lcd_string("     "); //to remove the whole no and clr the screen.....using instead of lcd_cmd(0x01) to clr screen to reduce the delay
+
+		delay(3);
 		
 		lcd_cmd(0x80); //to bring back the curson to 1st row, 1st col
 		
